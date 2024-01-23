@@ -6,6 +6,8 @@ import zipfile
 
 def empty_extract_folder() -> None:
     shutil.rmtree('extract')
+    with open('extract/.gitkeep', 'w') as f:
+        pass
 
 
 class RemoveExcelPassword:
