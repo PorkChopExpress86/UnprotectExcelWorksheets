@@ -38,7 +38,8 @@ class RemoveExcelPassword:
                         self.remove_protection_re(file_path)
 
     def remove_protection_re(self, file_path) -> None:
-        search_comp = re.compile(r"<sheetProtection (.*)scenarios=\"1\"/>")
+        # search_comp = re.compile(r"<sheetProtection (.*)scenarios=\"1\"/>")
+        search_comp = re.compile(r"(<sheetProtection [^>]*/\s*>)")
         xml_file = open(file_path, mode='r', encoding='utf-8')
         text_original = xml_file.read()
         xml_file.close()
