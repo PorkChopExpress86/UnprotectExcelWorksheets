@@ -1,2 +1,4 @@
-extract/*
-unlocked/*
+extract
+!extract/.gitkeep
+unlocked
+!unlocked/.gitkeep
